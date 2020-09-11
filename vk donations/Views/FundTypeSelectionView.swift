@@ -10,8 +10,12 @@ import SwiftUI
 struct FundTypeSelectionView: View {
     var body: some View {
         VStack {
-            targetGoalCard
-            regularGoalCard
+            NavigationLink(
+                destination: TargetFundForm().navigationBarTitle("Целевой сбор"),
+                label: {targetGoalCard})
+            NavigationLink(
+                destination: TargetFundForm().navigationBarTitle("Целевой сбор"),
+                label: {regularGoalCard})
         }
     }
 }

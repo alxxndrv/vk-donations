@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0405F265250BE9A2003112B4 /* TargetFundForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0405F264250BE9A2003112B4 /* TargetFundForm.swift */; };
 		04EB35AB250B7B430010ABDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EB35AA250B7B430010ABDB /* AppDelegate.swift */; };
 		04EB35AD250B7B430010ABDB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EB35AC250B7B430010ABDB /* SceneDelegate.swift */; };
 		04EB35B0250B7B430010ABDB /* vk_donations.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 04EB35AE250B7B430010ABDB /* vk_donations.xcdatamodeld */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0405F264250BE9A2003112B4 /* TargetFundForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetFundForm.swift; sourceTree = "<group>"; };
 		04EB35A7250B7B430010ABDB /* vk donations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "vk donations.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04EB35AA250B7B430010ABDB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04EB35AC250B7B430010ABDB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 			children = (
 				04EB35B1250B7B430010ABDB /* ContentView.swift */,
 				04EB35DE250B83B30010ABDB /* FundTypeSelectionView.swift */,
+				0405F264250BE9A2003112B4 /* TargetFundForm.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 				04EB35AB250B7B430010ABDB /* AppDelegate.swift in Sources */,
 				04EB35DF250B83B30010ABDB /* FundTypeSelectionView.swift in Sources */,
 				04EB35AD250B7B430010ABDB /* SceneDelegate.swift in Sources */,
+				0405F265250BE9A2003112B4 /* TargetFundForm.swift in Sources */,
 				04EB35B2250B7B430010ABDB /* ContentView.swift in Sources */,
 				04EB35B0250B7B430010ABDB /* vk_donations.xcdatamodeld in Sources */,
 			);
