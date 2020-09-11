@@ -44,14 +44,36 @@ struct TargetFundForm: View {
     
     @ObservedObject var data = TargetFundData()
     
+    @State var inputImage: UIImage?
+    
+    @State var image: Image?
+    
+    func loadImage() {
+        withAnimation {
+            guard inputImage != nil else { return }
+        }
+        
+    }
+    
+    
+    @State var showingImagePicker = false
+    
+    
     init(){
         UITableView.appearance().backgroundColor = .clear
         UITableView.appearance().separatorStyle = UITableViewCell.SeparatorStyle.none
 
+
     }
     var body: some View {
         Form {
-            UploadPhotoPlaceholder()
+            if (inputImage == nil || inputImage == UIImage()) {
+                UploadPhotoPlaceholder().onTapGesture(count: 1, perform: {
+                    showingImagePicker = true
+                })
+            } else {
+                PhotoPlaceholder(image: $inputImage)
+            }
             Section(header: Text("Название сбора").vkUISectionTitleFont()) {
                 TextField("Название сбора", text: $data.title).vkUITextField()
             }
@@ -81,13 +103,43 @@ struct TargetFundForm: View {
                 }
             }
         }.listStyle(GroupedListStyle())
+        .sheet(isPresented: $showingImagePicker, onDismiss: loadImage) {
+            ImagePicker(image: self.$inputImage)
+        }
     }
 }
 
 struct PhotoPlaceholder: View {
-    var image = UIImage()
+    @Binding var image: UIImage?
     var body: some View {
-        Image(uiImage: image).clipShape(RoundedRectangle(cornerRadius: 10))
+        ZStack {
+            HStack {
+                Spacer()
+                VStack {
+                    Button(action: {
+                        withAnimation {
+                        image = nil
+                        }
+                        
+                    }, label: {
+                        Image(systemName: "xmark.circle.fill")
+                            .font(.system(size: 28))
+
+                })
+                    Spacer()
+                }
+            }.padding()
+            .zIndex(2)
+            Image(uiImage: image ?? UIImage())
+                .resizable()
+                .scaledToFill()
+
+                .frame(width: 370,height: 160)
+                .clipShape(RoundedRectangle(cornerRadius: 10))
+                .zIndex(1)
+        }
+
+//            .padding()
     }
 }
 
@@ -95,7 +147,7 @@ struct UploadPhotoPlaceholder: View {
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 10).stroke(style: StrokeStyle(lineWidth: 1, dash: [4, 4])).frame(height: 160)
-                .padding()
+//                .padding()
                 HStack {
                     Image("picture_outline_28")
                         .resizable()
