@@ -25,7 +25,7 @@ struct DonationsListView: View {
             VStack {
                     noFundsPlaceholderText
                     createFundButtonPlaceholder
-            }
+            }.navigationBarTitle("Пожертвования")
         }
     }
 }
@@ -34,7 +34,8 @@ struct DonationsListView: View {
 extension DonationsListView {
     var createFundButtonPlaceholder: some View {
         NavigationLink(
-            destination: Text("Destination"),
+            destination: FundTypeSelectionView()
+                .navigationBarTitle("Тип сбора", displayMode: .inline),
             label: {
             Text("Создать сбор")
                 .font(.system(size: 15, weight: .medium))

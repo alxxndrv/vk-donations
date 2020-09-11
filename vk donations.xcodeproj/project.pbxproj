@@ -16,6 +16,7 @@
 		04EB35BA250B7B450010ABDB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04EB35B8250B7B450010ABDB /* LaunchScreen.storyboard */; };
 		04EB35C5250B7B450010ABDB /* vk_donationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EB35C4250B7B450010ABDB /* vk_donationsTests.swift */; };
 		04EB35D0250B7B450010ABDB /* vk_donationsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EB35CF250B7B450010ABDB /* vk_donationsUITests.swift */; };
+		04EB35DF250B83B30010ABDB /* FundTypeSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EB35DE250B83B30010ABDB /* FundTypeSelectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		04EB35CB250B7B450010ABDB /* vk donationsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "vk donationsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04EB35CF250B7B450010ABDB /* vk_donationsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vk_donationsUITests.swift; sourceTree = "<group>"; };
 		04EB35D1250B7B450010ABDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04EB35DE250B83B30010ABDB /* FundTypeSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundTypeSelectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +105,7 @@
 			children = (
 				04EB35AA250B7B430010ABDB /* AppDelegate.swift */,
 				04EB35AC250B7B430010ABDB /* SceneDelegate.swift */,
-				04EB35B1250B7B430010ABDB /* ContentView.swift */,
+				04EB35DD250B83A00010ABDB /* Views */,
 				04EB35B3250B7B450010ABDB /* Assets.xcassets */,
 				04EB35B8250B7B450010ABDB /* LaunchScreen.storyboard */,
 				04EB35BB250B7B450010ABDB /* Info.plist */,
@@ -137,6 +139,15 @@
 				04EB35D1250B7B450010ABDB /* Info.plist */,
 			);
 			path = "vk donationsUITests";
+			sourceTree = "<group>";
+		};
+		04EB35DD250B83A00010ABDB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				04EB35B1250B7B430010ABDB /* ContentView.swift */,
+				04EB35DE250B83B30010ABDB /* FundTypeSelectionView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,6 +281,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04EB35AB250B7B430010ABDB /* AppDelegate.swift in Sources */,
+				04EB35DF250B83B30010ABDB /* FundTypeSelectionView.swift in Sources */,
 				04EB35AD250B7B430010ABDB /* SceneDelegate.swift in Sources */,
 				04EB35B2250B7B430010ABDB /* ContentView.swift in Sources */,
 				04EB35B0250B7B430010ABDB /* vk_donations.xcdatamodeld in Sources */,
