@@ -174,13 +174,10 @@ struct PaymentMethodPicker: View {
     var body: some View {
         ZStack {
             TextField("", text: .constant("Счёт VK Pay · 1234")).disabled(true).vkUITextField()
-//                .padding()
-            
             HStack {
                 Spacer()
                 Image(systemName: "chevron.down").font(.system(size: 18, weight: .bold)).padding(.horizontal).foregroundColor(Color(#colorLiteral(red: 0.7215686275, green: 0.7568627451, blue: 0.8, alpha: 1)))
             }
-//            .padding()
         }
     }
 }
