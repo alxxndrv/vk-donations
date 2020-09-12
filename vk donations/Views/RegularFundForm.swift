@@ -36,7 +36,7 @@ struct RegularFundForm: View {
         Form {
             if (inputImage == nil || inputImage == UIImage()) {
                 UploadPhotoPlaceholder().onTapGesture(count: 1, perform: {
-                    showingImagePicker = true
+                    self.showingImagePicker = true
                 })
             } else {
                 PhotoPlaceholder(image: $inputImage)
@@ -78,7 +78,7 @@ struct RegularFundForm: View {
         .sheet(isPresented: $showingImagePicker, onDismiss: loadImage) {
             ImagePicker(image: self.$inputImage.didSet { _ in
                 
-                data.image = inputImage
+                self.data.image = self.inputImage
                 
             })
         }

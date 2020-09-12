@@ -22,7 +22,7 @@ struct FundDetailedView: View {
     
     func getValue() {
         
-        value = Float(Int(data.currentProgress)! / Int(data.goal)!)
+        value = Float(Float(data.currentProgress)! / Float(data.goal)!)
         print(value, data.currentProgress, data.goal)
     }
     
@@ -71,7 +71,7 @@ struct FundDetailedView: View {
                 bottomHintView
             })
             .onAppear {
-                tint = data.endDate  - Date()
+                self.tint = self.data.endDate  - Date()
             }
         
     }
@@ -87,8 +87,8 @@ extension FundDetailedView {
             }
             Button(action: {
                 print("ff")
-                data.currentProgress = String(Int(data.currentProgress)! + 100)
-                getValue()
+                self.data.currentProgress = String(Int(self.data.currentProgress)! + 100)
+                self.getValue()
             }) {
             Text("Помочь")
                 .font(.system(size: 15, weight: .medium, design: .default))
@@ -109,11 +109,11 @@ struct ProgressBarWithLabel: View {
         GeometryReader { geometry in
             ZStack(alignment: .leading) {
                 Rectangle().frame(width: geometry.size.width , height: geometry.size.height)
-                    
+                
                     .foregroundColor(Color(#colorLiteral(red: 0.7215686275, green: 0.7568627451, blue: 0.8, alpha: 0.3)))
                     .overlay(HStack {
                         Spacer()
-                        Text("\(goal)₽")
+                        Text("\(self.goal)₽")
                             .font(.system(size: 14, weight: .medium, design: .default))
                             .foregroundColor(Color(#colorLiteral(red: 0.5058823529, green: 0.5490196078, blue: 0.6, alpha: 1))).padding(.trailing)
                     })
@@ -126,7 +126,7 @@ struct ProgressBarWithLabel: View {
                         .animation(.linear)
                         .overlay(HStack {
                             Spacer()
-                            Text("\(current)₽")
+                            Text("\(self.current)₽")
                                 .font(.system(size: 14, weight: .semibold, design: .default))
                                 .foregroundColor(.white).padding(.trailing)
                         })

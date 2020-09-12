@@ -22,11 +22,11 @@ struct SnippetPreviewView: View {
             
         SnippetView(progress: progress)
             .onTapGesture(count: 1, perform: {
-                shown = true
+                self.shown = true
             })
             .sheet(isPresented: $shown, content: {
             FundDetailedView()
-                .environmentObject(data)
+                .environmentObject(self.data)
                .navigationBarTitle("")
                .navigationBarHidden(true)
         })

@@ -74,7 +74,7 @@ struct TargetFundForm: View {
         Form {
             if (inputImage == nil || inputImage == UIImage()) {
                 UploadPhotoPlaceholder().onTapGesture(count: 1, perform: {
-                    showingImagePicker = true
+                    self.showingImagePicker = true
                 })
             } else {
                 PhotoPlaceholder(image: $inputImage)
@@ -114,7 +114,7 @@ struct TargetFundForm: View {
         .sheet(isPresented: $showingImagePicker, onDismiss: loadImage) {
             ImagePicker(image: self.$inputImage.didSet { _ in
                 
-                data.image = inputImage
+                self.data.image = self.inputImage
                 
             })
         }
@@ -130,7 +130,7 @@ struct PhotoPlaceholder: View {
                 VStack {
                     Button(action: {
                         withAnimation {
-                        image = nil
+                            self.image = nil
                         }
                         
                     }, label: {

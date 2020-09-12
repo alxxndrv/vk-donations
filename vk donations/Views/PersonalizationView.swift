@@ -31,7 +31,7 @@ struct PersonalizationView: View {
                 })
                 Section(header: Text("Дата окончания")) {
                 DatePicker(dateAsString, selection: $data.endDate.didSet {_ in
-                    getDateAsString()
+                    self.getDateAsString()
                 }, in: Date(timeIntervalSinceNow: 86400)...,displayedComponents: .date)
                     .disabled(selection == 1)
                     .padding()
@@ -102,7 +102,7 @@ struct VKUIRadioButtons: View {
             .contentShape(Rectangle())
             .onTapGesture {
                 withAnimation {
-                selection = 1
+                    self.selection = 1
                 }
             }
             .padding(.vertical)
@@ -118,7 +118,7 @@ struct VKUIRadioButtons: View {
             .contentShape(Rectangle())
             .onTapGesture {
                 withAnimation {
-                selection = 2
+                    self.selection = 2
                 }
             }
         }
