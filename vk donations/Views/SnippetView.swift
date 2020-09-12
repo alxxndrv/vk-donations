@@ -95,6 +95,12 @@ struct SnippetView: View {
     @EnvironmentObject var data: TargetFundData
     
     @State var progress: Float = 0.2
+    
+    func getValue() {
+         
+         progress = Float(Float(data.currentProgress)! / Float(data.goal)!)
+         print(progress, Float(data.currentProgress), Float(data.goal))
+     }
     var body: some View {
         VStack(alignment: .center) {
             Image(uiImage: data.image ?? UIImage())
@@ -126,6 +132,9 @@ struct SnippetView: View {
                 }
                             
                 
+            }
+            .onAppear {
+                self.getValue()
             }
             .padding([.horizontal, .bottom])
             .padding(.top, 3)
