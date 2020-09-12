@@ -23,7 +23,7 @@ struct FundDetailedView: View {
     func getValue() {
         
         value = Float(Float(data.currentProgress)! / Float(data.goal)!)
-        print(value, data.currentProgress, data.goal)
+        print(value, Float(data.currentProgress), Float(data.goal))
     }
     
     @State var tint = TimeInterval()
