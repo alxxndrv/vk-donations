@@ -8,6 +8,32 @@
 import SwiftUI
 
 
+struct SnippetPreviewView: View {
+    @EnvironmentObject var data: TargetFundData
+    
+    @State var progress: Float = 0.2
+    @State var shown = false
+    func getValue() {
+        progress = Float(Int(data.goal)! / Int(data.currentProgress)!)
+    }
+    
+    var body: some View {
+        
+            
+        SnippetView(progress: progress)
+            .onTapGesture(count: 1, perform: {
+                shown = true
+            })
+            .sheet(isPresented: $shown, content: {
+            FundDetailedView()
+                .environmentObject(data)
+               .navigationBarTitle("")
+               .navigationBarHidden(true)
+        })
+            
+    }
+}
+
 struct ProgressBar: View {
     @Binding var value: Float
     
@@ -72,6 +98,7 @@ struct SnippetView: View {
     var body: some View {
         VStack(alignment: .center) {
             Image(uiImage: data.image ?? UIImage())
+                .renderingMode(.original)
                 .resizable()
                 .scaledToFill()
                 .frame(height: 140, alignment: .center)
@@ -79,7 +106,9 @@ struct SnippetView: View {
                 
                 
             VStack(alignment: .leading) {
-                Text(data.title).fontWeight(.semibold).font(.system(size: 15))
+                Text(data.title)
+//                    .renderingMode(.original)
+                    .fontWeight(.semibold).font(.system(size: 15))
                 Text("Георгий Александров · Закончится через 5 дней").fontWeight(.regular).font(.system(size: 13)).foregroundColor(Color(#colorLiteral(red: 0.5058823529, green: 0.5490196078, blue: 0.6, alpha: 1)))
                 Divider()
                 

@@ -10,7 +10,7 @@ import Combine
 
 class TargetFundData: ObservableObject {
     @Published var title = ""
-    @Published var goal = "0₽" {
+    @Published var goal = "0" {
         didSet {
             if self.goal.count > 1 && self.goal.prefix(1) == "0" {
                 self.goal = String(self.goal.dropFirst())
@@ -29,6 +29,7 @@ class TargetFundData: ObservableObject {
     @Published var endingWhenHitGoal = false
     @Published var endDate = Date(timeIntervalSinceNow: 86400)
     @Published var image: UIImage?
+    @Published var currentProgress = "0"
 }
 
 
@@ -84,10 +85,10 @@ struct TargetFundForm: View {
                 TextField("Сколько нужно собрать?", text: $data.goal).vkUITextField().keyboardType(.decimalPad)
             }
             Section(header: Text("Цель").vkUISectionTitleFont()) {
-                TextField("Например, лечение человека", text: .constant("")).vkUITextField()
+                TextField("Например, лечение человека", text: $data.textGoal).vkUITextField()
             }
             Section(header: Text("Описание").vkUISectionTitleFont()) {
-                TextField("На что пойдут деньги и как они кому-то помогут?", text: .constant("")).vkUITextField()
+                TextField("На что пойдут деньги и как они кому-то помогут?", text: $data.description).vkUITextField()
               }
             Section(header: Text("Куда получать деньги")) {
                 PaymentMethodPicker()

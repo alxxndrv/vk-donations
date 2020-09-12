@@ -17,7 +17,6 @@ struct PersonalizationView: View {
         dateformatter.dateFormat = "dd MMMM yyyy"
         dateformatter.locale = Locale(identifier: "ru")
         dateAsString = dateformatter.string(from: data.endDate)
-        
     }
     
     var body: some View {
@@ -42,7 +41,7 @@ struct PersonalizationView: View {
             }.listStyle(GroupedListStyle())
             Spacer()
             NavigationLink(
-                destination: SnippetView(progress: 0).environmentObject(data)
+                destination: SnippetPreviewView().environmentObject(data)
                     .navigationBarTitle("Дополнительно")) {
                 vkUIButton(text: "Создать сбор", disabled: selection == 2 && dateAsString == "Выберите дату")
             }.disabled(
