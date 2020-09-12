@@ -26,6 +26,8 @@ class TargetFundData: ObservableObject {
     }
     @Published var textGoal = ""
     @Published var description = ""
+    @Published var endingWhenHitGoal = false
+    @Published var endDate = Date(timeIntervalSinceNow: 86400)
 }
 
 
@@ -91,7 +93,10 @@ struct TargetFundForm: View {
             }
             Section {
                 ZStack {
-                    NavigationLink(destination: Text("test")) {
+                    NavigationLink(destination: PersonalizationView(
+                                    )
+                    .environmentObject(data)
+                    .navigationBarTitle("Дополнительно")) {
                         Text("Продолжить")
                             .font(.system(size: 17, weight: .medium, design: .default))
                             .foregroundColor(.white)
