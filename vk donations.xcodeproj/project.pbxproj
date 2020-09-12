@@ -10,6 +10,7 @@
 		0405F265250BE9A2003112B4 /* TargetFundForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0405F264250BE9A2003112B4 /* TargetFundForm.swift */; };
 		0405F267250C119B003112B4 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0405F266250C119A003112B4 /* ImagePicker.swift */; };
 		0405F269250C1CEB003112B4 /* PersonalizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0405F268250C1CEA003112B4 /* PersonalizationView.swift */; };
+		0405F26B250CB05D003112B4 /* SnippetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0405F26A250CB05D003112B4 /* SnippetView.swift */; };
 		04EB35AB250B7B430010ABDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EB35AA250B7B430010ABDB /* AppDelegate.swift */; };
 		04EB35AD250B7B430010ABDB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EB35AC250B7B430010ABDB /* SceneDelegate.swift */; };
 		04EB35B0250B7B430010ABDB /* vk_donations.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 04EB35AE250B7B430010ABDB /* vk_donations.xcdatamodeld */; };
@@ -43,6 +44,7 @@
 		0405F264250BE9A2003112B4 /* TargetFundForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetFundForm.swift; sourceTree = "<group>"; };
 		0405F266250C119A003112B4 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		0405F268250C1CEA003112B4 /* PersonalizationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalizationView.swift; sourceTree = "<group>"; };
+		0405F26A250CB05D003112B4 /* SnippetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnippetView.swift; sourceTree = "<group>"; };
 		04EB35A7250B7B430010ABDB /* vk donations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "vk donations.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04EB35AA250B7B430010ABDB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04EB35AC250B7B430010ABDB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 				0405F266250C119A003112B4 /* ImagePicker.swift */,
 				0405F268250C1CEA003112B4 /* PersonalizationView.swift */,
 				0405F264250BE9A2003112B4 /* TargetFundForm.swift */,
+				0405F26A250CB05D003112B4 /* SnippetView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -296,6 +299,7 @@
 				0405F267250C119B003112B4 /* ImagePicker.swift in Sources */,
 				0405F265250BE9A2003112B4 /* TargetFundForm.swift in Sources */,
 				04EB35B2250B7B430010ABDB /* ContentView.swift in Sources */,
+				0405F26B250CB05D003112B4 /* SnippetView.swift in Sources */,
 				04EB35B0250B7B430010ABDB /* vk_donations.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

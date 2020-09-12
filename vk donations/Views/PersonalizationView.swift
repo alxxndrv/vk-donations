@@ -42,7 +42,8 @@ struct PersonalizationView: View {
             }.listStyle(GroupedListStyle())
             Spacer()
             NavigationLink(
-                destination: Text("Destination")) {
+                destination: SnippetView(progress: 0).environmentObject(data)
+                    .navigationBarTitle("Дополнительно")) {
                 vkUIButton(text: "Создать сбор", disabled: selection == 2 && dateAsString == "Выберите дату")
             }.disabled(
                 (selection == 2 && dateAsString == "Выберите дату")

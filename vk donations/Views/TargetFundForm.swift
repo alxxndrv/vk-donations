@@ -28,6 +28,7 @@ class TargetFundData: ObservableObject {
     @Published var description = ""
     @Published var endingWhenHitGoal = false
     @Published var endDate = Date(timeIntervalSinceNow: 86400)
+    @Published var image: UIImage?
 }
 
 
@@ -93,8 +94,7 @@ struct TargetFundForm: View {
             }
             Section {
                 ZStack {
-                    NavigationLink(destination: PersonalizationView(
-                                    )
+                    NavigationLink(destination: PersonalizationView()
                     .environmentObject(data)
                     .navigationBarTitle("Дополнительно")) {
                         Text("Продолжить")
@@ -105,11 +105,16 @@ struct TargetFundForm: View {
                             .background(RoundedRectangle(cornerRadius: 10).fill(Color(#colorLiteral(red: 0.2862745098, green: 0.5254901961, blue: 0.8, alpha: 1))))
                             .padding()
                     }
+                                    
                 }
             }
         }.listStyle(GroupedListStyle())
         .sheet(isPresented: $showingImagePicker, onDismiss: loadImage) {
-            ImagePicker(image: self.$inputImage)
+            ImagePicker(image: self.$inputImage.didSet { _ in
+                
+                data.image = inputImage
+                
+            })
         }
     }
 }
