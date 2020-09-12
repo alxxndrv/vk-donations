@@ -12,6 +12,7 @@
 		0405F269250C1CEB003112B4 /* PersonalizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0405F268250C1CEA003112B4 /* PersonalizationView.swift */; };
 		0405F26B250CB05D003112B4 /* SnippetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0405F26A250CB05D003112B4 /* SnippetView.swift */; };
 		0475A6FC250CBD78001D4D26 /* FundDetailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0475A6FB250CBD78001D4D26 /* FundDetailedView.swift */; };
+		0475A6FE250CD2F2001D4D26 /* RegularFundForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0475A6FD250CD2F2001D4D26 /* RegularFundForm.swift */; };
 		04EB35AB250B7B430010ABDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EB35AA250B7B430010ABDB /* AppDelegate.swift */; };
 		04EB35AD250B7B430010ABDB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EB35AC250B7B430010ABDB /* SceneDelegate.swift */; };
 		04EB35B0250B7B430010ABDB /* vk_donations.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 04EB35AE250B7B430010ABDB /* vk_donations.xcdatamodeld */; };
@@ -47,6 +48,7 @@
 		0405F268250C1CEA003112B4 /* PersonalizationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalizationView.swift; sourceTree = "<group>"; };
 		0405F26A250CB05D003112B4 /* SnippetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnippetView.swift; sourceTree = "<group>"; };
 		0475A6FB250CBD78001D4D26 /* FundDetailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundDetailedView.swift; sourceTree = "<group>"; };
+		0475A6FD250CD2F2001D4D26 /* RegularFundForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularFundForm.swift; sourceTree = "<group>"; };
 		04EB35A7250B7B430010ABDB /* vk donations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "vk donations.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04EB35AA250B7B430010ABDB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04EB35AC250B7B430010ABDB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 				0405F266250C119A003112B4 /* ImagePicker.swift */,
 				0405F268250C1CEA003112B4 /* PersonalizationView.swift */,
 				0405F264250BE9A2003112B4 /* TargetFundForm.swift */,
+				0475A6FD250CD2F2001D4D26 /* RegularFundForm.swift */,
 				0405F26A250CB05D003112B4 /* SnippetView.swift */,
 				0475A6FB250CBD78001D4D26 /* FundDetailedView.swift */,
 			);
@@ -300,6 +303,7 @@
 				04EB35DF250B83B30010ABDB /* FundTypeSelectionView.swift in Sources */,
 				04EB35AD250B7B430010ABDB /* SceneDelegate.swift in Sources */,
 				0405F267250C119B003112B4 /* ImagePicker.swift in Sources */,
+				0475A6FE250CD2F2001D4D26 /* RegularFundForm.swift in Sources */,
 				0475A6FC250CBD78001D4D26 /* FundDetailedView.swift in Sources */,
 				0405F265250BE9A2003112B4 /* TargetFundForm.swift in Sources */,
 				04EB35B2250B7B430010ABDB /* ContentView.swift in Sources */,

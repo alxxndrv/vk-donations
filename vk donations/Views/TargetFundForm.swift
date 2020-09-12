@@ -24,6 +24,7 @@ class TargetFundData: ObservableObject {
         }
         
     }
+    @Published var isRegular = false
     @Published var textGoal = ""
     @Published var description = ""
     @Published var endingWhenHitGoal = false

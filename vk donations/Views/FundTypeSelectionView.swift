@@ -14,7 +14,7 @@ struct FundTypeSelectionView: View {
                 destination: TargetFundForm().navigationBarTitle("Целевой сбор"),
                 label: {targetGoalCard})
             NavigationLink(
-                destination: TargetFundForm().navigationBarTitle("Целевой сбор"),
+                destination: RegularFundForm().navigationBarTitle("Регулярный сбор"),
                 label: {regularGoalCard})
         }
     }
